@@ -18,7 +18,6 @@ export default class App extends Component {
     };
 
     render() {
-        const {store} = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
@@ -27,7 +26,7 @@ export default class App extends Component {
                     </Text>
                 </View>
                 <View style={styles.content}>
-                    {store.timers.map((model, i) => (
+                    {this.props.store.timers.map((model, i) => (
                         <Timer model={model} key={i}/>
                     ))}
                 </View>
