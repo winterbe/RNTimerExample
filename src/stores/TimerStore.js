@@ -8,15 +8,15 @@ export default class TimerStore {
 
     constructor() {
         this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
-        // this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
+        this.timers.push(new TimerModel());
     }
 
     @action tick() {

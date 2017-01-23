@@ -23,7 +23,7 @@ export default class App extends Component {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.headline}>
-                        Timer
+                        RNTimerExample
                     </Text>
                 </View>
                 <View style={styles.content}>

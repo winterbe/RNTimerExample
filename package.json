@@ -8,7 +8,8 @@
     "test:coverage": "jest --coverage",
     "packager": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 6s\"",
-    "android": "node node_modules/react-native/local-cli/cli.js run-android"
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "android-emulator": "emulator -avd reactnative"
   },
   "dependencies": {
     "babel-plugin-transform-decorators-legacy": "^1.3.4",

@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     view: {
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 10
     },
     label: {
         fontFamily: 'Courier New',
