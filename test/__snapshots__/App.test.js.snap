@@ -24,7 +24,7 @@ exports[`test renders correctly 1`] = `
           "fontSize": 30,
         }
       }>
-      Timer
+      RNTimerExample
     </Text>
   </View>
   <View
@@ -39,6 +39,7 @@ exports[`test renders correctly 1`] = `
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
+          "marginBottom": 10,
         }
       }>
       <Text
