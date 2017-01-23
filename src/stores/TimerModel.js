@@ -36,6 +36,6 @@ export default class TimerModel {
     @computed get label() {
         return moment
             .duration(this.tickTime - this.startTime)
-            .format({template: 'mm:ss,SS', trim: false});
+            .format({template: 'mm:ss,SSS', trim: false});
     }
 }

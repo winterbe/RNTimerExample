@@ -8,14 +8,17 @@ import {
 import Timer from './Timer';
 import TimerStore from '../stores/TimerStore';
 
-const timerStore = new TimerStore();
-
 /**
  * @author winterbe
  */
 @observer
 export default class App extends Component {
+    static defaultProps = {
+        store: new TimerStore()
+    };
+
     render() {
+        const {store} = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
@@ -24,12 +27,20 @@ export default class App extends Component {
                     </Text>
                 </View>
                 <View style={styles.content}>
-                    {timerStore.timers.map((timerModel, i) => (
-                        <Timer timerModel={timerModel} key={i}/>
+                    {store.timers.map((model, i) => (
+                        <Timer model={model} key={i}/>
                     ))}
                 </View>
             </View>
         );
+    }
+
+    componentDidMount() {
+        this.props.store.enable();
+    }
+
+    componentWillUnmount() {
+        this.props.store.disable();
     }
 }
 

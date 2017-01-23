@@ -14,18 +14,19 @@ import TimerModel from '../stores/TimerModel';
 @observer
 export default class Timer extends Component {
     static propTypes = {
-        timerModel: React.PropTypes.instanceOf(TimerModel),
+        model: React.PropTypes.instanceOf(TimerModel),
     };
 
     render() {
-        const {timerModel} = this.props;
+        const {model} = this.props;
         return (
             <View style={styles.view}>
-                <Text style={styles.text}>
-                    {timerModel.label}
+                <Text style={styles.label}>
+                    {model.label}
                 </Text>
-                <Button title={timerModel.running ? 'Stop' : 'Start'}
-                        onPress={() => timerModel.toggle()}/>
+                <Button title={model.running ? 'Stop' : 'Start'}
+                        style={styles.button}
+                        onPress={() => model.toggle()}/>
             </View>
         );
     }
@@ -37,8 +38,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-    text: {
-        fontSize: 22,
-        marginRight: 20
+    label: {
+        fontFamily: 'Courier New',
+        fontSize: 26,
+        width: 160,
+        color: '#222'
+    },
+    button: {
     }
 });
