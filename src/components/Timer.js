@@ -1,39 +1,31 @@
 import React, {Component} from 'react';
+import {observer} from 'mobx-react/native';
 import {
     StyleSheet,
     View,
     Text,
     Button
 } from 'react-native';
-import moment from 'moment';
-import 'moment-duration-format';
+import TimerModel from '../stores/TimerModel';
 
 /**
  * @author winterbe
  */
-export default class StopWatch extends Component {
+@observer
+export default class Timer extends Component {
     static propTypes = {
-        startTime: React.PropTypes.number,
-        running: React.PropTypes.bool
+        timerModel: React.PropTypes.instanceOf(TimerModel),
     };
 
     render() {
-        const now = Date.now();
-        const {startTime = now, running = false} = this.props;
-        const text = moment
-            .duration(now - startTime)
-            .format({template: 'mm:ss,SS', trim: false});
+        const {timerModel} = this.props;
         return (
             <View style={styles.view}>
                 <Text style={styles.text}>
-                    {text}
+                    {timerModel.label}
                 </Text>
-                {running && (
-                    <Button title="Stop" onPress={() => console.log('start')}/>
-                )}
-                {!running && (
-                    <Button title="Start" onPress={() => console.log('stop')}/>
-                )}
+                <Button title={timerModel.running ? 'Stop' : 'Start'}
+                        onPress={() => timerModel.toggle()}/>
             </View>
         );
     }
