@@ -1,7 +1,7 @@
 import {observable, action, computed} from 'mobx';
 import TimerModel from './TimerModel';
 
-const TICK_DELAY = 40;
+const TICK_DELAY = 100;
 
 export default class TimerStore {
     @observable timers = [];
