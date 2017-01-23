@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch --notify",
+    "test:coverage": "jest --coverage",
     "packager": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 6s\"",
     "android": "node node_modules/react-native/local-cli/cli.js run-android"
