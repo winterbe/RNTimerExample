@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {useStrict} from 'mobx';
 import {observer} from 'mobx-react/native';
+import {enableLogging} from 'mobx-logger';
 import {
     StyleSheet,
     Text,
@@ -7,6 +9,15 @@ import {
 } from 'react-native';
 import Timer from './Timer';
 import TimerStore from '../stores/TimerStore';
+
+useStrict(true);
+
+enableLogging({
+    predicate: () => __DEV__ && Boolean(window.navigator.userAgent),
+    action: false,
+    reaction: true,
+    compute: false
+});
 
 /**
  * @author winterbe

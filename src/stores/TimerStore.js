@@ -7,6 +7,10 @@ export default class TimerStore {
     @observable timers = [];
 
     constructor() {
+        this.initTimers();
+    }
+
+    @action initTimers() {
         this.timers.push(new TimerModel());
         // this.timers.push(new TimerModel());
         // this.timers.push(new TimerModel());
@@ -20,7 +24,11 @@ export default class TimerStore {
     }
 
     @action tick() {
-        this.timers.forEach(it => it.tick());
+        this.timers.forEach(timer => {
+            if (timer.running) {
+                timer.tick();
+            }
+        });
     }
 
     @action enable() {
