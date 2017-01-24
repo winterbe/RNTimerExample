@@ -20,9 +20,12 @@ The following run scripts can be used from the console in order to test and run 
 - `npm run lint`: Check eslint rules.
 - `npm run packager`: Start the React Native packager (must be started before running the ios/android app).
 - `npm run packager:reset`: Start the React Native packager and reset cache (for troubleshooting only).
-- `npm run android-emulator`: Start the Android emulator (must be started before running the android app).
 - `npm run ios`: **Run the app in iOS simulator**.
 - `npm run android`: **Run the app in Android emulator**.
+- `npm run android:emulator`: Start the Android emulator (must be started before running the android app).
+- `npm run android:devmenu`: Open developer menu in the running Android emulator.
+- `npm run android:apk-assemble`: Assemble Android APK files.
+- `npm run android:apk-install`: Install Android APK on the connected device.
 
 ## Links
 

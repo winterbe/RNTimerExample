@@ -11,7 +11,10 @@
     "packager:reset": "watchman watch-del-all && rm -rf $TMPDIR/react-* && node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 6s\"",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "android-emulator": "emulator -avd reactnative"
+    "android:emulator": "emulator -avd reactnative",
+    "android:devmenu": "adb shell input keyevent KEYCODE_MENU",
+    "android:apk-assemble": "cd android && ./gradlew assembleRelease",
+    "android:apk-install": "cd android && ./gradlew installRelease"
   },
   "dependencies": {
     "babel-plugin-transform-decorators-legacy": "1.3.4",
