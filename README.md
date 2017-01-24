@@ -22,6 +22,19 @@ The following run scripts can be used from the console in order to test and run 
 - `npm run ios`: **Run the app in iOS simulator**.
 - `npm run android`: **Run the app in Android emulator**.
 
+## Troubleshooting
+
+In rare circumstances you have to manually reset the packager cache via terminal:
+
+```
+watchman watch-del-all
+rm -rf $TMPDIR/react-*
+npm cache clean
+rm -rf node_modules
+npm install
+node node_modules/react-native/local-cli/cli.js start --reset-cache
+```
+
 ## Links
 
 - [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
