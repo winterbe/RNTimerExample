@@ -97,6 +97,9 @@ exports[`test renders correctly 1`] = `
                   "padding": 8,
                   "textAlign": "center",
                 },
+                Object {
+                  "color": "#337ab7",
+                },
               ]
             }>
             Start
