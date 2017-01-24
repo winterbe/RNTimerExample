@@ -1,6 +1,6 @@
 # RNTimerExample
 
-React Native example app using Mobx 3 for state handling.
+> A mobile app for getting started with React Native and Mobx development.
 
 ![Screenshot](https://raw.githubusercontent.com/winterbe/RNTimerExample/master/screenshot.png)
 
