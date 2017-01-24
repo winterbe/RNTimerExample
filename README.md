@@ -22,6 +22,17 @@ The following run scripts can be used from the console in order to test and run 
 - `npm run ios`: **Run the app in iOS simulator**.
 - `npm run android`: **Run the app in Android emulator**.
 
+## Links
+
+- [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
+- [Who's using React Native?](https://facebook.github.io/react-native/showcase.html)
+- [Mobx Docs](https://mobx.js.org/)
+- [Jest Docs](https://facebook.github.io/jest/docs/tutorial-react-native.html)
+- [Exponent React Native Library](https://getexponent.com/)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [Code Push](https://microsoft.github.io/code-push/)
+- [Fast Lane](https://fastlane.tools/)
+
 ## License
 
 MIT
