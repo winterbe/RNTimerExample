@@ -17,6 +17,7 @@ The following run scripts can be used from the console in order to test and run 
 - `npm test`: Run all tests.
 - `npm run test:watch`: Run all tests in watch-mode.
 - `npm run test:coverage`: Run all tests and create coverage report (located in project folder `/coverage`).
+- `npm run lint`: Check eslint rules.
 - `npm run packager`: Start the React Native packager (must be started before running the ios/android app).
 - `npm run android-emulator`: Start the Android emulator (must be started before running the android app).
 - `npm run ios`: **Run the app in iOS simulator**.
@@ -37,11 +38,12 @@ node node_modules/react-native/local-cli/cli.js start --reset-cache
 
 ## Links
 
-- [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
+- [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
 - [Who's using React Native?](https://facebook.github.io/react-native/showcase.html)
-- [React Docs](https://facebook.github.io/react/docs/hello-world.html)
-- [Mobx Docs](https://mobx.js.org/)
-- [Jest Docs](https://facebook.github.io/jest/docs/tutorial-react-native.html)
+- [React](https://facebook.github.io/react/docs/hello-world.html)
+- [Mobx](https://mobx.js.org/)
+- [Jest](https://facebook.github.io/jest/docs/tutorial-react-native.html)
+- [ESLint](http://eslint.org/)
 - [Exponent React Native Library](https://getexponent.com/)
 - [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
 - [Code Push](https://microsoft.github.io/code-push/)
