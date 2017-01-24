@@ -1,11 +1,9 @@
 import 'react-native';
 import React from 'react';
+import renderer from 'react-test-renderer';
 import App from '../src/components/App';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-// Note: https://wietse.loves.engineering/using-jest-with-react-native-and-mobx-34949ea7d2cf#.8ttqxa9p0
+// see: https://github.com/mobxjs/mobx-react/issues/186
 jest.mock('mobx-react/native', () => require('mobx-react/custom'));
 
 it('renders correctly', () => {
@@ -14,4 +12,5 @@ it('renders correctly', () => {
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+    component.unmount();
 });
