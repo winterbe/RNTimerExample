@@ -25,7 +25,7 @@ export default class Timer extends Component {
                     {model.label}
                 </Text>
                 <Button title={model.running ? 'Stop' : 'Start'}
-                        style={styles.button}
+                        color={model.running ? '#d9534f' : '#337ab7'}
                         onPress={() => model.toggle()}/>
             </View>
         );
@@ -44,7 +44,5 @@ const styles = StyleSheet.create({
         fontSize: 26,
         width: 160,
         color: '#222'
-    },
-    button: {
     }
 });
