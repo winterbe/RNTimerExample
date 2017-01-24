@@ -1,4 +1,4 @@
-import {observable, action, computed} from 'mobx';
+import {observable, action} from 'mobx';
 import TimerModel from './TimerModel';
 
 const TICK_DELAY = 100;
