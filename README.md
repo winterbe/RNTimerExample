@@ -39,6 +39,7 @@ node node_modules/react-native/local-cli/cli.js start --reset-cache
 
 - [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
 - [Who's using React Native?](https://facebook.github.io/react-native/showcase.html)
+- [React Docs](https://facebook.github.io/react/docs/hello-world.html)
 - [Mobx Docs](https://mobx.js.org/)
 - [Jest Docs](https://facebook.github.io/jest/docs/tutorial-react-native.html)
 - [Exponent React Native Library](https://getexponent.com/)
