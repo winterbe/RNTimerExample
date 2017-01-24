@@ -8,6 +8,7 @@
     "test:coverage": "jest --coverage",
     "lint": "eslint .",
     "packager": "node node_modules/react-native/local-cli/cli.js start",
+    "packager:reset": "watchman watch-del-all && rm -rf $TMPDIR/react-* && node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios --simulator=\"iPhone 6s\"",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "android-emulator": "emulator -avd reactnative"
