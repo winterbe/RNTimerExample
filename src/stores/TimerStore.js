@@ -1,7 +1,7 @@
 import {observable} from 'mobx';
 import TimerModel from './TimerModel';
 
-const NUM_TIMERS = 10;
+export const NUM_TIMERS = 10;
 
 export default class TimerStore {
     @observable timers = [];
