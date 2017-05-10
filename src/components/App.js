@@ -14,8 +14,8 @@ useStrict(true);
 
 enableLogging({
     predicate: () => __DEV__ && Boolean(window.navigator.userAgent),
-    action: false,
-    reaction: true,
+    action: true,
+    reaction: false,
     compute: false
 });
 
@@ -29,6 +29,7 @@ export default class App extends Component {
     };
 
     render() {
+        const {store} = this.props;
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
@@ -37,20 +38,12 @@ export default class App extends Component {
                     </Text>
                 </View>
                 <View style={styles.content}>
-                    {this.props.store.timers.map((model, i) => (
-                        <Timer model={model} key={i}/>
+                    {store.timers.map((timer, i) => (
+                        <Timer timerModel={timer} key={i}/>
                     ))}
                 </View>
             </View>
         );
-    }
-
-    componentDidMount() {
-        this.props.store.enable();
-    }
-
-    componentWillUnmount() {
-        this.props.store.disable();
     }
 }
 

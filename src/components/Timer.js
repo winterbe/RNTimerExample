@@ -14,19 +14,22 @@ import TimerModel from '../stores/TimerModel';
 @observer
 export default class Timer extends Component {
     static propTypes = {
-        model: React.PropTypes.instanceOf(TimerModel),
+        timerModel: React.PropTypes.instanceOf(TimerModel),
     };
 
     render() {
-        const {model} = this.props;
+        const {timerModel} = this.props;
+        const isRunning = timerModel.isRunning;
         return (
             <View style={styles.view}>
                 <Text style={styles.label}>
-                    {model.label}
+                    {timerModel.label}
                 </Text>
-                <Button title={model.running ? 'Stop' : 'Start'}
-                        color={model.running ? '#d9534f' : '#337ab7'}
-                        onPress={() => model.toggle()}/>
+                <Button title={isRunning ? 'Stop' : 'Start'}
+                        color={isRunning ? '#d9534f' : '#337ab7'}
+                        onPress={() => isRunning
+                            ? timerModel.stop()
+                            : timerModel.start()}/>
             </View>
         );
     }
